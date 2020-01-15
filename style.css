@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  background-color: #039be5;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2em;
+  letter-spacing: 0.21px;
+  line-height: 10px; 
+  max-width: 270px;
+  padding: 10px;
+  text-align: center;
+  transition-duration: 0.15s;
+  transition-property: background-color;
+  transition-timing-function: linear;
+  margin-top: 0.6em; 
+  /* float: right; */
+}
+
+/* button:hover {
+  background-color: #0288d1;
+} */
+
+.input-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  color: #212121;
+}
+
+input {
+  background-color: #f1f3f4;
+  border-radius: 2px;
+  border-width: 0;
+  color: #5f6368;
+  font-size: 1em;
+  height: 45px;
+  line-height: 20px;
+  margin: 0;
+  margin-top: 10px;
+  max-width: 60%;
+  padding: 8px 8px 8px 8px;
+  transition-delay: 0s, 0s;
+  transition-duration: 0.2s, 0.2s;
+  transition-property: background-color, color;
+  transition-timing-function: ease, ease;
+  vertical-align: middle;
+  width: 50%;
+}
+
+input:hover {
+  background-color: #e8eaed;
+}
+
+.card1 {
+  background-color: #fff;
+  /* border: 1px solid #eceff1;
+  border-radius: 8px; */
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+    rgba(60, 64, 67, 0.15) 0 1px 3px 1px; */
+  margin: 2%;
+  margin-top: 80px;
+  padding: 20px;
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+#dataDiv{
+    width : 50%;
+}
+.card::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.btn-group b1 {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+  }
+  
+  .btn-group b1:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group b1:hover {
+    background-color: #3e8e41;
+  }
