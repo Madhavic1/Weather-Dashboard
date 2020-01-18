@@ -15,47 +15,92 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-
-    <header class = "h1 bg-dark text-white text-center py-2">Weather Dashboard</header>
-
-    <div class="clearfix " id="clearfixDiv">
-        <div class="card1   text-left">
-            <form  class="w-80">
-                <label for="search-city" class="mb-0 h4">Search for a City:</label>
-                <div class="input-group mb-3 mt-0">
-                    
-                <input type="search" class="form-control" placeholder="City Name" id="search-city" aria-describedby="search-btn">
-                <div class="input-group-append">
-                <button class = "btn btn-primary" id="search-btn"><i class = "fa fa-search"></i></button>
-                </div>
-                </div>
-            </form>
-
-       
-            <div class="btn-group-vertical" id="city-buttons">
-            
-              </div>
-            </div>
-  
-        
-        <div class="card1" id="currentWeatherDiv">
-            <h2 id="city-name" class="w-100 p-o mb-4"></h2>
-            <p id="temperature"></p><!--temperature-->
-            <p id="humidity"></p><!--humidity-->
-            <p id="wind-speed"></p><!--Wind speed-->
-            <p id="uv-index"></p><!--UV index-->
-
-        </div>
-
-        <div class="5dayForecastDiv">
-            
-        </div>
-    </div>
+  <button onclick="createDynamicArrays()">Clicke Me to expand the view</button>
+  <p id="texting"></p>
+  <div id="5dayForecastDiv" class = "d-flex justify-content-between p-2"> </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
 
 <script src="script.js"></script>
+
+<script>
+function createDiv(){
+  // alert("hey")
+  // var cardDiv = $("<div>");
+  //   cardDiv.attr("class","card text-white bg-primary mb-3 mr-1");
+  // //  cardDiv.css("max-width","18rem");
+
+  //       var cardBodyDiv = $("<card-body>");
+  //           var dateEl = $("h5");
+  //           dateEl.attr("class","card-title");
+  //           // dateEl.attr("id","date-el");
+  //           dateEl.text( "Date Comes here ");
+
+  //       //    console.log("date printing "+moment(day1[0].dt_txt).format("L"));
+            
+  //           //var weather-icon 
+
+  //           var temperature = $("h4");
+  //           temperature.attr("class","card-text");
+  //           temperature.text("temperature");
+
+  //           var humidity =  $("h4");
+  //           humidity.attr("class","card-text");
+  //           humidity.text("Humidity ")
+
+  //           cardBodyDiv.append(dateEl);
+  //           cardBodyDiv.append(temperature);
+  //           cardDiv.append(humidity);
+  //       cardDiv.append(cardBodyDiv);
+  //   $("#5dayForecastDiv").append(cardDiv);
+
+  var testDiv = $("<div>");
+
+    testDiv.attr("class","card text-white bg-secondary mb-3 mr-1");
+
+    var cardBodyDiv = $("<div>");
+      cardBodyDiv.attr("class","card-body bg-danger")
+    var headingEl = $("<h1>");
+      headingEl.text("Madhavi");
+      var weather_icon = $("<img>")
+weather_icon.attr("src","http://openweathermap.org/img/wn/04d@2x.png");
+      cardBodyDiv.append(headingEl,weather_icon);
+
+testDiv.append(cardBodyDiv);
+  $("#5dayForecastDiv").append(testDiv);
+
+}
+
+function createDynamicArrays(){
+  var day1 = ["i","am","day1"];
+  var day2 = ["i","am","day2"];
+  var day3 = ["i","am","day3"];
+  var day4 = ["i","am","day4"];
+  var day5 = ["i","am","day5"];
+
+  for(var i=1;i<=5;i++)
+  {
+    var array_name = `day${i}`;
+    console.log("value "+array_name);
+    
+    testArray(array_name);
+  }
+  
+}
+
+function testArray(day){
+  for(let i=0;i<day.length;i++)
+  {
+    console.log(`day[${i}]= +${day[i]}`);
+    
+  }
+}
+
+function test(){
+$("#testing").text("Test Funtion");
+}
+</script>
 </body>
 </html>
 
