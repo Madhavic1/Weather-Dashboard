@@ -67,7 +67,7 @@ $(document).ready(function () {
         console.log("city name in new function " + city_name + " and is button ?" + isButton);
 
         $("#search-city").val("");
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&units=imperial&appid=" + APIKey;
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&units=imperial&appid=" + APIKey;
         $.ajax({
             url: queryURL,
             method: "GET",
@@ -93,7 +93,7 @@ $(document).ready(function () {
                 //getting weather icon
                 var weather_icon = $("<img>");
                 var iconID = response.weather[0].icon;
-                var iconURL = "http://openweathermap.org/img/wn/" + iconID + "@2x.png";
+                var iconURL = "https://openweathermap.org/img/wn/" + iconID + "@2x.png";
                 weather_icon.attr("src", iconURL)
                     .width("10%")
                     .height("10%");
@@ -106,7 +106,7 @@ $(document).ready(function () {
                 var latitude = response.coord.lat;
                 var longitude = response.coord.lon;
                 /*********getting UV Index ************************* */
-                var uvindexURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + latitude + "&lon=" + longitude;
+                var uvindexURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + latitude + "&lon=" + longitude;
                 var type = "current";
                 getUVindex(uvindexURL, type);
 
@@ -145,7 +145,7 @@ $(document).ready(function () {
 
     function show5dayForecast(city_name) {
 
-        var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city_name + "&units=imperial&appid=" + APIKey;
+        var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city_name + "&units=imperial&appid=" + APIKey;
 
         $.ajax({
             url: forecastURL,
@@ -234,7 +234,7 @@ $(document).ready(function () {
         var weather_icon = $("<img>");
         var iconID = day[1].weather[0].icon;
         console.log("iconID " + iconID);
-        var iconURL = "http://openweathermap.org/img/wn/" + iconID + "@2x.png";
+        var iconURL = "https://openweathermap.org/img/wn/" + iconID + "@2x.png";
         weather_icon.attr("src", iconURL)
             .width("40%")
             .height("40%");
@@ -287,7 +287,7 @@ $(document).ready(function () {
 
     //findMyCity function finds the city name from OpenWeathermap API by passing latitude and longitude as arguments.
     function findMyCity(lat, long) {
-        var url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${APIKey}&units=imperia`;
+        var url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${APIKey}&units=imperia`;
         $.ajax({
             url: url,
             method: "GET"
