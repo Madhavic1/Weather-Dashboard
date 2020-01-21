@@ -287,7 +287,7 @@ $(document).ready(function () {
 
     //findMyCity function finds the city name from OpenWeathermap API by passing latitude and longitude as arguments.
     function findMyCity(lat, long) {
-        var url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${APIKey}&units=imperia`;
+        var url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${APIKey}&units=imperial`;
         $.ajax({
             url: url,
             method: "GET"
