@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".bg").css({ "background-image": "url('clear-cloudy-sky.PNG')" });
+   // $(".bg").css({ "background-image": "url('clear-cloudy-sky.PNG')" });
     var APIKey = "80153e75178279ff6dfdc2b1bc72f6a2";
     var city_name;
     var current_date = moment(new Date());
