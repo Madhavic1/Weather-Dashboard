@@ -57,7 +57,7 @@ input {
   transition-property: background-color, color;
   transition-timing-function: ease, ease;
   vertical-align: middle;
-  width: 50%;
+  width: 60%;
 }
 
 input:hover {
@@ -73,7 +73,7 @@ input:hover {
   margin: 2%;
   margin-top: 80px;
   padding: 20px;
-  width: 50%;
+  width: 70%;
   overflow: hidden;
   position: relative;
   float: left;
@@ -120,4 +120,9 @@ input:hover {
   }
   .bg{
     background-repeat: space;
+    background-size: cover;
   }
+
+  @media (max-width: 768px) {
+    .banner{ max-width: 100%; }
+}

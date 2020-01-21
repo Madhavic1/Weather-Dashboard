@@ -18,8 +18,10 @@
 
   <header class="h1 bg-dark text-white text-center py-2">Weather Dashboard</header>
   <div class="container-fluid">
-    <div class="clearfix" id="clearfixDiv">
-      <div class="card1 text-left bg-light" style="width:20%">
+    
+    <div class="row clearfix " id="clearfixDiv">
+      <div class="col-sm-12 col-md-3">
+      <div class="card1 text-left bg-light" style="width:80%">
         <form>
           <label for="search-city" class="mb-0 h4">Search for a City:</label>
           <div class="input-group mb-3 mt-0">
@@ -33,12 +35,12 @@
         </form>
 
 
-        <div class="btn-group-vertical" id="city-buttons">
+        <div class="btn-group-vertical mr-2" id="city-buttons">
 
         </div>
       </div>
-
-
+    </div>
+      <div class="col-sm-12 col-md-9">
       <div class="card1 p-1" id="Weather-data-div">
 
         <div id="currentWeatherDiv" class="p-2 mb-3">
@@ -56,9 +58,10 @@
 
         </div>
       </div>
-
+    </div>
 
     </div>
+  
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
