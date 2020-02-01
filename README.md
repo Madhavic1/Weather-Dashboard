@@ -2,12 +2,15 @@
 Build a weather dashboard application with search functionality to find current weather conditions and the future weather outlook for multiple cities. 
 
 ## table of contents
+  * Link to the deployed Application
   * Introduction / General Information
   * Languages used
   * Installation
   * Launch
   * Sources to read
   
+  ### Link to the deployed Application
+  https://madhavic1.github.io/Weather-Dashboard/
 
   ### Introducion (Aim of the project) / General Information:
     The main aim of this project is to build  a weather dashboard application with search functionality to find current weather conditions and the future weather outlook for multiple cities. This  app runs in the browser and feature dynamically updated HTML and CSS powered by jQuery.
